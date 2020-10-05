@@ -84,10 +84,10 @@ def submit_data():
         for i,j in enumerate(indices):
             dist=round(distances[i][0],2)
   
-            temp = [dist]
+            #temp = [dist]
             matches.append(temp)
         matches = pd.DataFrame(matches, columns=['Match confidence'])
-        df['match']=matches['Match confidence']
+        df['match']=matches['Match confidence'] 
         df1=df.sort_values('match')
         df2=df1[['Position', 'Company','Location']].head(10).reset_index()
         
